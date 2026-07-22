@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
@@ -13,7 +14,7 @@
         <div class="bg_color">
             <header>
 
-                <nav class="nav wrapper">
+                <nav class="nav wrapper menu_active">
                     <div class="logo">
                         <img src="assets/icons/Logo (1).svg" alt="logo">
                         <p>Wonders</p>
@@ -58,15 +59,15 @@
                                     </div>
                                             
                                     <div class="radio2">
-                                        <input type="radio" name="trip" id="one_way" value="one way">
+                                        <input type="radio" name="trip" id="one_way" value="one_way">
                                         <label for="one_way">One Way</label>
                                     </div>
 
                                     <div class="counter">
                                         <img src="assets/icons/person solid.svg" alt="icon">
-                                        <button class="minus">-</button>
-                                        <span class="quantity">1</span>
-                                        <button class="plus">+</button>
+                                        <button class="minus" id="counter_minus" type="button">-</button>
+                                        <span class="quantity" id="counter_value"></span>
+                                        <button class="plus" id="counter_plus" type="button">+</button>
                                     </div>   
                                 </div>   
 
@@ -181,7 +182,9 @@
                 <section id="faqs">
                     <div class="wrapper3">
                         <h1>FAQs.</h1>
-                        <div class="Q_A">
+                         <div class="faqs_container"></div><!--через details  -->
+
+                        <!-- <div class="Q_A">
                             <div class="items_wrapper">
                                 <div class="faqs_item">   
                                     <h4>Alpine Bus Journeys?</h4>
@@ -235,7 +238,7 @@
                                 <p class="par">Sometimes it's the weather (snow happens!), sometimes a sudden flock of particularly slow-moving sheep on the road, and sometimes the driver just had to stop for a photo of that view.
                                 Or maybe they got stuck behind a tractor. Welcome to "Mountain Road Time"!</p>
                             </div>  
-                        </div>
+                        </div> -->
                     </div>
                 </section>
 
@@ -324,7 +327,7 @@
     </footer>
     
 
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
 </body>
 </html>
